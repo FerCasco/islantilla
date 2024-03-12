@@ -7,7 +7,7 @@
         <h2>Consulta 1: Reservas asociada a cliente, sus noches y el gasto total</h2>
         <pre class="text-white">{{ reservasConDetalles | json_encode(constant('JSON_PRETTY_PRINT')) }}</pre>
 
-        <h2>Consulta 2: Reservas con más de 3 noches</h2>
+        <h2>Consulta 2: Clientes que se hospedan 1 semana o más</h2>
         <pre class="text-white">{{ reservasConNoches | json_encode(constant('JSON_PRETTY_PRINT')) }}</pre>
     </div>
 {% endblock %}
