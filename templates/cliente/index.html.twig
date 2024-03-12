@@ -1,0 +1,15 @@
+{% extends 'home/index.html.twig' %}
+
+{% block title %}Listado de Clientes{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <h1 class="text-center text-white">Listado de Clientes</h1>
+        <div class="text-white">
+            {{ clientesJson|nl2br|raw }}
+        </div>
+    </div>
+    <div class="text-center">
+        <a href="{{ path('insertar_cliente') }}" class="btn btn-success">Insertar Nuevo Cliente</a>
+    </div>
+{% endblock %}

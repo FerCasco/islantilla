@@ -1,0 +1,35 @@
+{% extends 'home/index.html.twig' %}
+
+{% block title %}Listado de Reservas
+{% endblock %}
+
+{% block body %}
+	<div class="container mt-5">
+		<h1 class="text-center text-white">Listado de Reservas</h1>
+		<table class="table table-dark">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Cliente</th>
+					<th>Habitación</th>
+					<th>Noches</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for reserva in reservas %}
+					<tr>
+						<td>{{ reserva.id }}</td>
+						<td>{{ reserva.cliente.nombre }}
+							{{ reserva.cliente.apellidos }}</td>
+						<td>{{ reserva.habitacion.tipo }}</td>
+						<td>{{ reserva.noches }}</td>
+
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		<div class="text-center">
+			<a href="{{ path('insertar_reserva') }}" class="btn btn-success">Insertar Nueva Reserva</a>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'home/index.html.twig' %}
+
+{% block body %}
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="text-center">Nueva Reserva</h1>
+                        {{ form_start(form) }}
+                        <div class="mb-3">
+                            {{ form_label(form.cliente, 'Cliente', {'label_attr': {'class': 'form-label'}}) }}
+                            {{ form_widget(form.cliente, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                        <div class="mb-3">
+                            {{ form_label(form.habitacion, 'Habitación', {'label_attr': {'class': 'form-label'}}) }}
+                            {{ form_widget(form.habitacion, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                        <div class="mb-3">
+                            {{ form_label(form.noches, 'Noches', {'label_attr': {'class': 'form-label'}}) }}
+                            {{ form_widget(form.noches, {'attr': {'class': 'form-control', 'placeholder': 'Ingrese el número de noches'}}) }}
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </div>
+                        {{ form_end(form) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
